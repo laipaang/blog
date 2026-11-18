@@ -4,6 +4,7 @@ Laipaang 的静态技术博客。暖白与紫色视觉，CSS 轨道动画、滚�
 
 - 首页：https://laipaang.github.io/blog/
 - 文章：https://laipaang.github.io/blog/2026-11-17-from-attention-to-action/
+- 课程：https://laipaang.github.io/blog/courses/agentic-ai/
 
 ## 目录
 
@@ -30,3 +31,7 @@ GitHub Pages 从 `main` 分支根目录发布，提交更新后自动部署。�
 Markdown 正文与 HTML 独立维护，修改内容时需保持同步。图表中的示意性质与数据口径在原文中注明。暂未配置版权许可与自定义域名。
 
 CSS 动画遵循系统的减少动态效果设置。禁用 JavaScript 时文章和首页仍可阅读。
+
+## Agentic AI 课程
+
+7 章 28 节的中文交互课程，总览与 1.1 已发布。内容、来源版本及许可位于 `courses/agentic-ai/`，共享样式与交互位于 `courses/assets/`。后续小节为课程规划。课程支持讲义、演示、深浅主题与本机学习记录，交互示例采用明确标注的教学词表与数据。
