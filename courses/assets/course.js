@@ -99,6 +99,12 @@
   $$('.question input').forEach(input=>input.addEventListener('change',()=>{const box=$('#feedback-'+input.name);const correct=input.value==='correct';box.textContent=(correct?'回答正确。':'再想一想。')+feedback[input.name];box.className='answer-feedback '+(correct?'correct':'incorrect');updateQuiz();}));
   if(completed)$('#completion-state').textContent='本机已有本节的完成记录。';updateQuiz();
   completionButton.addEventListener('click',()=>{completed=true;const saved=write(storageKey,'yes');$('#completion-state').textContent=saved?'已记录：1.1 完成。学习记录仅保存在本机浏览器。':'本次已完成；浏览器限制本地存储，关闭后可能无法保留。';updateQuiz();});
+  $('#reset-lesson').addEventListener('click',()=>{
+    completed=false;write(storageKey,'no');
+    $$('.question input').forEach(input=>{input.checked=false;});
+    $$('.answer-feedback').forEach(box=>{box.textContent='';box.className='answer-feedback';});
+    $('#completion-state').textContent='本节记录已重置，可以重新练习。';updateQuiz();
+  });
 
   const slides=$$('.lesson-section');let slide=0;let oldScroll=0;
   const renderSlide=()=>{slides.forEach((section,i)=>section.classList.toggle('current-slide',i===slide));$('#slide-count').textContent=`${slide+1} / ${slides.length}`;$('#prev-slide').disabled=slide===0;$('#next-slide').disabled=slide===slides.length-1;};
